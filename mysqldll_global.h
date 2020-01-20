@@ -1,0 +1,12 @@
+#ifndef MYSQLDLL_GLOBAL_H
+#define MYSQLDLL_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(MYSQLDLL_LIBRARY)
+#  define MYSQLDLLSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define MYSQLDLLSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // MYSQLDLL_GLOBAL_H
